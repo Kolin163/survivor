@@ -1,16 +1,58 @@
-# Godot 4+ specific ignores
+# Godot editor cache and generated project data
 .godot/
-.nomedia
 
-# Godot-specific ignores
+# Godot 3 legacy import cache (Godot 4 projects normally use *.import sidecars)
 .import/
+
+# Godot export credentials and local export artifacts
 export.cfg
 export_credentials.cfg
+exports/
+export/
+build/
+dist/
 
-# Imported translations (automatically generated from CSV files)
+# Generated translation output
 *.translation
 
-# Mono-specific ignores
+# Mono/.NET generated data (only relevant if C# is enabled)
 .mono/
 data_*/
 mono_crash.*.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE local settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary, backup, and log files
+*.tmp
+*.temp
+*.bak
+*.log
+*.old
+*.orig
+
+# Blender backup files
+*.blend1
+
+# Local environment/secrets
+.env
+.env.*
+!.env.example
+
+# Local test recordings and profiling output
+captures/
+profiling/
+
+# IMPORTANT:
+# Do not ignore *.uid or *.import in Godot 4+ projects.
+# *.uid files preserve stable resource/script UIDs and should be committed.
+# *.import files preserve import settings and should be committed when present.
