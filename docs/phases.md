@@ -114,9 +114,9 @@
 
 - [ ] Создать структуру проекта и базовые настройки — `godot-project-setup`
 - [ ] Настроить Input Map — `godot-input`
-- [ ] Создать тестовую сцену с комнатами, стенами и препятствиями — `godot-architecture`, `godot-physics`
-- [ ] Реализовать игрока `CharacterBody2D` и свободное движение — `godot-physics`
-- [ ] Реализовать следящую, невращаемую камеру — `godot-architecture`
+- [x] Создать тестовую сцену с комнатами, стенами и препятствиями — `godot-architecture`, `godot-physics`
+- [x] Реализовать игрока `CharacterBody2D` и свободное движение — `godot-physics`
+- [x] Реализовать следящую, невращаемую камеру — `godot-architecture`
 - [ ] Реализовать прицеливание мышью — `godot-input`
 - [ ] Реализовать стрельбу по направлению мыши — `godot-gdscript-patterns`
 - [ ] Реализовать магазин, патроны и перезарядку — `godot-gdscript-patterns`
