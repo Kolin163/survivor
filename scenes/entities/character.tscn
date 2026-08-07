@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dxdm4bwexte25"]
+
+[ext_resource type="Script" uid="uid://whm3ykbbvivr" path="res://scripts/entities/character.gd" id="1_character"]
+[ext_resource type="Texture2D" path="res://assets/textures/characters/placeholders/shadow.png" id="2_shadow"]
+[ext_resource type="Texture2D" uid="uid://g14r2ejhfhlh" path="res://assets/textures/characters/test/upleg.png" id="3_gbi13"]
+[ext_resource type="Texture2D" uid="uid://cpcn8y1simneb" path="res://assets/textures/characters/test/body.png" id="3_khvuq"]
+[ext_resource type="Texture2D" uid="uid://s2y0jyr8kofo" path="res://assets/textures/characters/test/lowleg.png" id="4_g80gw"]
+[ext_resource type="Texture2D" uid="uid://dovowayqgefpg" path="res://assets/textures/characters/test/head.png" id="4_lnmi3"]
+[ext_resource type="Texture2D" uid="uid://dx5m57dplv35r" path="res://assets/textures/characters/test/uparm.png" id="5_gbi13"]
+[ext_resource type="Texture2D" uid="uid://dk3bi0xvda00y" path="res://assets/textures/characters/test/lowarm.png" id="7_g80gw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_character"]
+radius = 14.0
+
+[node name="Character" type="CharacterBody2D" unique_id=133482404]
+script = ExtResource("1_character")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1706325367]
+z_index = -10
+position = Vector2(0, 31)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_shadow")
+hframes = 4
+vframes = 4
+
+[node name="UpperLegL" type="Sprite2D" parent="." unique_id=1532490674]
+position = Vector2(7, 3)
+texture = ExtResource("3_gbi13")
+offset = Vector2(-7, -3)
+
+[node name="LowerLegL" type="Sprite2D" parent="UpperLegL" unique_id=533943458]
+position = Vector2(5, 30)
+texture = ExtResource("4_g80gw")
+offset = Vector2(-12, -33)
+
+[node name="UpperLegR" type="Sprite2D" parent="." unique_id=1292528366]
+position = Vector2(-7, 3)
+texture = ExtResource("3_gbi13")
+offset = Vector2(7, -3)
+flip_h = true
+
+[node name="LowerLegR" type="Sprite2D" parent="UpperLegR" unique_id=1696136191]
+position = Vector2(-5, 30)
+texture = ExtResource("4_g80gw")
+offset = Vector2(12, -33)
+flip_h = true
+
+[node name="Body" type="Sprite2D" parent="." unique_id=514465593]
+z_index = 1
+texture = ExtResource("3_khvuq")
+
+[node name="Head" type="Sprite2D" parent="." unique_id=1276550880]
+z_index = 2
+position = Vector2(0, -39)
+texture = ExtResource("4_lnmi3")
+offset = Vector2(0, 39)
+
+[node name="Armor" type="Sprite2D" parent="." unique_id=1629699452]
+z_index = 3
+hframes = 4
+vframes = 4
+
+[node name="UpperArmL" type="Sprite2D" parent="." unique_id=245303047]
+z_index = 4
+position = Vector2(16, -30)
+texture = ExtResource("5_gbi13")
+offset = Vector2(-15, 30)
+
+[node name="LowerArmL" type="Sprite2D" parent="UpperArmL" unique_id=1043941539]
+position = Vector2(6.999997, 15.000001)
+texture = ExtResource("7_g80gw")
+offset = Vector2(-22, 15)
+
+[node name="UpperArmR" type="Sprite2D" parent="." unique_id=1496992322]
+z_index = 4
+position = Vector2(-16, -30)
+texture = ExtResource("5_gbi13")
+offset = Vector2(15, 30)
+flip_h = true
+
+[node name="LowerArmR" type="Sprite2D" parent="UpperArmR" unique_id=2124324797]
+position = Vector2(-7, 15)
+texture = ExtResource("7_g80gw")
+offset = Vector2(22, 15)
+flip_h = true
+
+[node name="WeaponPivot" type="Node2D" parent="." unique_id=928239607]
+z_index = 5
+
+[node name="Weapon" type="Sprite2D" parent="WeaponPivot" unique_id=181560241]
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=194462317]
+visible = false
+shape = SubResource("CircleShape2D_character")
+
+[node name="InteractionPoint" type="Marker2D" parent="." unique_id=825390657]
+position = Vector2(0, 20)
+
+[node name="AimPivot" type="Marker2D" parent="." unique_id=1722426249]
+position = Vector2(0, -4)
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1031229562]
+
+[node name="StatusComponent" type="Node" parent="." unique_id=1808270981]
+
+[node name="InventoryComponent" type="Node" parent="." unique_id=544718296]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1561550071]

@@ -112,9 +112,12 @@
 
 > **Цель:** проверить базовое ощущение управления персонажем в 2D top-down без контента.
 
-- [ ] Создать структуру проекта и базовые настройки — `godot-project-setup`
-- [ ] Настроить Input Map — `godot-input`
+- [x] Создать структуру проекта и базовые настройки — `godot-project-setup`
+- [x] Настроить Input Map — `godot-input`
 - [x] Создать тестовую сцену с комнатами, стенами и препятствиями — `godot-architecture`, `godot-physics`
+- [x] Создать общий шаблон персонажа (`scenes/entities/character.tscn`) — `godot-architecture`, `godot-physics`
+- [x] Зафиксировать pixel-art top-down convention и размер кадра 64×64 — `visual_style_guide.md`
+- [x] Определить визуальный placeholder персонажа и базовые точки привязки — `visual_style_guide.md`, `godot-animation`
 - [x] Реализовать игрока `CharacterBody2D` и свободное движение — `godot-physics`
 - [x] Реализовать следящую, невращаемую камеру — `godot-architecture`
 - [ ] Реализовать прицеливание мышью — `godot-input`
